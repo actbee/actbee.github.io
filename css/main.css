@@ -3,7 +3,7 @@ body { margin: 40px auto; width: 70%; }
 a { text-decoration: none; color: #999; }
 a:hover { text-decoration: underline; }
 
-p, ul { font-size: 2.5em; line-height: 2.4em; color: #333; }
+p, ul { font-size: 4.5em; line-height: 4.4em; color: #333; }
 
 h1, h2, h3, h4 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
 h1 { font-size: 3em;  }
@@ -22,8 +22,8 @@ ul.posts li { list-style: none; }
 
 /* CV */
 .cv { margin: 0px 0px 40px; }
-.cv h1 { font-size: 6em; }
-.cv h2 { font-size: 4em; }
+.cv h1 { font-size: 3em; }
+.cv h2 { font-size: 2em; }
 .cv address, .cv .download { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
 .cv address, .cv p { font-size: 2.4em; }
 .cv .download { float: right; font-size: .8em; text-transform: uppercase; }
