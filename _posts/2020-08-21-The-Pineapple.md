@@ -16,12 +16,15 @@ Below are some paintings I create based on it.
 ## Type A
 
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/3.jpg?raw=true" width="1200" >
+
 *The original real pineapple.*
+
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/8.jpg?raw=true" width="1200" >
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/9.jpg?raw=true" width="1200">
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/10.jpg?raw=true" width="1200" >
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/11.jpg?raw=true" width="1200">
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/12.jpg?raw=true" width="1200" >
+
 *Paintings from complex to simple based on that*
 
 "The Pineapple 5x420x297, 2019"
@@ -33,9 +36,13 @@ Inspired by the great artist Yves Klein I tried a similar way to paint by pressi
 then pulling for multiple times. I have to say the outcome is really attractive.
 
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/1.png?raw=true" width="1200" >
+
 *Pull the pineapple"
+
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/2.png?raw=true" width="1200" >
+
 *Press the pineapple"
+
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/14.jpg?raw=true" width="1200">
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/15.jpg?raw=true" width="1200">
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/16.jpg?raw=true" width="1200">
@@ -44,6 +51,7 @@ then pulling for multiple times. I have to say the outcome is really attractive.
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/19.jpg?raw=true" width="1200">
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/20.jpg?raw=true" width="1200">
 <img src="https://github.com/actbee/actbee.github.io/blob/master/images/visual/21.jpg?raw=true" width="1200">
+
 *Finall results*
 
 "Made in Pineapple 8x420x297, 2019"
