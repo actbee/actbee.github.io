@@ -68,8 +68,8 @@ for Embedded & real-time systems, and 56 in the world for Design automation.
 
 ### 10.DECENT DESIGN PROGRAM!
 
-The school of design here is probablly one of the best design schools here! You can always meet some interesting creative students here full of energy! Some are people with leadership
-while otheres are cool geeks! It is ranked 5 in design here according to the Chinese Ministry of Education! Some top undergraudate students go to URL, RCA, UW, CMU and Keio to do their
+The school of design here is probablly one of the best design schools here! You can always meet some interesting creative students here full of energy! It is ranked 5 in design here
+according to the Chinese Ministry of Education! Some top undergraduate students go to URL, RCA, UW, CMU and Keio to do their
 further studies. Others do go to some top design companies to start their careers and also there are some alumnus who make great achievement in the field of design. (Regardless the fact 
-that the design school may not as good as its ranking,) It is one of the top design schools here in any means.
+that the design school may not as good as its ranking,) It is one of the top design schools here in any means!
 
