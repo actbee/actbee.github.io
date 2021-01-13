@@ -52,7 +52,7 @@ professors there who are knowledgeable with colorful life experience, great pass
 
 The ranking of Hunan University is greatly rising these years.
 According to the latest mainstream rankings(2021), it is ranked:  
-[252 in USNEWS Best Globa 2021 Universities](https://www.usnews.com/education/best-global-universities/hunan-university-505375),  
+[252 in USNEWS Best Globa 2021](https://www.usnews.com/education/best-global-universities/hunan-university-505375),  
 [401-500 in THE World 2021](https://www.timeshighereducation.com/world-university-rankings/2021/world-ranking#!/page/0/length/25/sort_by/rank/sort_order/asc/cols/stats)  
 [201-300 in ARWU World 2020](http://www.shanghairanking.com/ARWU2020.html)  
 [601-650 in QS World 2020](https://www.topuniversities.com/universities/hunan-university/more)  
