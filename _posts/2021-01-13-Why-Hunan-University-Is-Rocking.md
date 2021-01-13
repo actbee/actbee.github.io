@@ -8,7 +8,7 @@ Though I have to say that once before I once hated being in Hunan University(mos
 reasons and its bureaucratism atmosphore in some parts), I do want to list the points which make the university
 unique and a rocky place to live in.
 
-#Points to make it rock!
+# Points to make it rock!
 
 ## 1.NO WALL!
 
@@ -64,8 +64,9 @@ Yes, it is not even at the top level but yes, it is growing these years! At leas
 The CS department here is not in the 1st tire of China, but also it is growing veeeery fast these years. Some of the top undergraduate students here go to some famous schools
 like John Hopkins University, UT Austin, New York University, University of Tokyo, Tsinghua University and Peking University to do their graduate studies! Some choose to go
 to some top tech companies like Microsoft, Amazon, Alibaba, Tencent, Bytedance and Meituan to start their careers! So yes, you can surely find some talented students here.  
-According to [CSRankings](http://csrankings.org/), it is ranked around 50 in Asia in general, ** 106 in the world from 2020 to 2021 (FAST GROWING!) **, and about 55 in the world
-for Embedded & real-time systems, and 56 in the world for Design automation.  
+According to [CSRankings](http://csrankings.org/), it is ranked around 50 in Asia in general,
+** 106 in the world from 2020 to 2021 (FAST GROWING!) ** , 
+and about 55 in the world for Embedded & real-time systems, and 56 in the world for Design automation.  
 
 ## 10.DECENT DESIGN PROGRAM
 
