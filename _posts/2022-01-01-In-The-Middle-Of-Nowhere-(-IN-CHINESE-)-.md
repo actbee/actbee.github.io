@@ -1,13 +1,9 @@
-
 ---
 layout: post
-title: "In the middle of nowhere (in Chinese)"
+title: "In The Middle Of Nowhere (In Chinese)"
 date: 2022-01-01
 ---
 
-
-
-## In the middle of nowhere (in Chinese)
 
 依稀记得去年的第一天在深圳湾岸的海滩目送着夕阳，操心着计算机视觉课的从第一人称手部图像里面分割出手部并且按照姿势进行归类的大作业。晃眼一年过去了，疫情已经持续了将近两年，在美国这个天寒地冻的东北角林间小屋里面什么都没做地虚度光阴过完了22年的第一天。  
 
