@@ -4,13 +4,14 @@ layout: feed
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
  
- <title>ACTBEE's Blog</title>
+ <title>Blogs</title>
+ <p>I am always trying to do some outputs based on my thoughts.</p>
  <link href="http://actbee.github.io/blog/atom.xml" rel="self"/>
  <link href="http://actbee.github.io/blog"/>
  <updated>{{ site.time | date_to_xmlschema }}</updated>
  <id>http://actbee.github.io/blog</id>
  <author>
-   <name>ACTBEE</name>
+   <name>Xuedan Zou</name>
    <email>rainman511@outlook.com</email>
  </author>
 
