@@ -1,6 +1,6 @@
 ---
 layout: default
-title: ACTBEE
+title: Intro
 ---
 
 
@@ -10,11 +10,21 @@ title: ACTBEE
 		<div class="blurb">
 			<div align=center>
 			<h1>Xuedan ZOU</h1>
-			<h1>邹 雪丹</h1>
- <img width="400" height="300" src="https://github.com/actbee/actbee.github.io/blob/master/images/2.1.jpg?raw=true"/>
- <img width="400" height="300" src="https://github.com/actbee/actbee.github.io/blob/master/images/2.2.jpg?raw=true"/>
- <img width="400" height="300" src="https://github.com/actbee/actbee.github.io/blob/master/images/2.3.jpg?raw=true"/>
- <img width="400" height="300" src="https://github.com/actbee/actbee.github.io/blob/master/images/2.4.jpg?raw=true"/>
+			<h2>邹 雪丹</h2>
+			<script type="text/javascript">
+				//<!CDATA[
+				var pic = [];
+				pic[0] = "https://github.com/actbee/actbee.github.io/blob/master/images/2.1.jpg?raw=true";
+				pic[1] = "https://github.com/actbee/actbee.github.io/blob/master/images/2.2.jpg?raw=true";
+				pic[2] = "https://github.com/actbee/actbee.github.io/blob/master/images/2.3.jpg?raw=true";
+				pic[3] = "https://github.com/actbee/actbee.github.io/blob/master/images/2.4.jpg?raw=true";
+			
+				var randomBgIndex = Math.round( Math.random() * 3 );
+			
+				//document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ') no-repeat 50% 0}</style>');
+				document.write("<img src=" + pic[randomBgIndex] + " width='400'>")
+				//]]>
+			</script>
 </div>
 		</div> 
 		<p><br><br></p>
