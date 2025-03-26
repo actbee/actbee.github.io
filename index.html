@@ -13,18 +13,33 @@ title: Xuedan ZOU
 			<h1>Xuedan ZOU</h1>
             <br><br>
 			<script type="text/javascript">
-				//<!CDATA[
 				var pic = [];
 				pic[0] = "https://github.com/actbee/actbee.github.io/blob/master/images/2.1.jpg?raw=true";
 				pic[1] = "https://github.com/actbee/actbee.github.io/blob/master/images/2.2.jpg?raw=true";
 				pic[2] = "https://github.com/actbee/actbee.github.io/blob/master/images/2.3.jpg?raw=true";
 				pic[3] = "https://github.com/actbee/actbee.github.io/blob/master/images/2.4.jpg?raw=true";
+				pic[4] = "https://github.com/actbee/actbee.github.io/blob/master/images/cover.png?raw=true";
+				pic[5] = "https://xuedananimation.wordpress.com/wp-content/uploads/2022/08/e2122345-2450-4d4b-a4c1-d02eff856359.png";
+				pic[6] = "https://xuedananimation.wordpress.com/wp-content/uploads/2022/08/1411661913933_.pic_.jpg";
+
+				var mes = [];
+				mes[0] = "東京 Tokyo";
+				mes[1] = "歴史　History";
+				mes[2] = "四川 Sichuan";
+				mes[3] = "社会階層 Social Status";
+				mes[4] = "権力 Power";
+				mes[5] = "美 Beautiful";
+				mes[6] = "感 Feel";
+
+
 			
-				var randomBgIndex = Math.round( Math.random() * 3 );
+				var randomBgIndex = Math.round( Math.random() * 6 );
 			
 				//document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ') no-repeat 50% 0}</style>');
 				document.write("<img src=" + pic[randomBgIndex] + " width='700px'>")
-				//]]>
+
+				randomBgIndex = Math.round( Math.random() * 6 );
+				document.write("<p>"+mes[randomBgIndex]+"</p>")
 			</script>
            </div>
 		</div> 
