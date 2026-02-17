@@ -21,14 +21,21 @@
 
 
   <body>
-    <nav>
-<ul>
-<li><a href="/">Home</a></li>
-<li><a href="/about">About</a></li>
-<li><a href="/blog">Blog</a></li>
-<li><a href="/project">Project</a></li>
-</ul>
-    </nav>
+  <nav>
+      <ul>
+          <li><a href="/">Home</a></li>
+          <li><a href="/about">About</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/project">Project</a></li>
+      </ul>
+      <ul class="language-switcher">
+          <li><button onclick="switchLanguage('en')">ENG</button></li>
+          <h5>/</h5>
+          <li><button onclick="switchLanguage('zh')">CHN</button></li>
+          <h5>/</h5>
+          <li><button onclick="switchLanguage('ja')">JPN</button></li>
+      </ul>
+  </nav>
 <div class="container">
 
   {{ content }}
