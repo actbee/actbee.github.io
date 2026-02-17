@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: "Behavior Guideline: Crucial Conversations:Tools for Talking When Stakes Are."
