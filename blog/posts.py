@@ -1,7 +1,7 @@
 import os
 import json
 
-posts_folder = '_posts/'
+posts_folder = 'posts/'
 output_file = 'posts.json'
 
 # Ensure the output directory exists, if a directory is specified

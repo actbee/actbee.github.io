@@ -16,7 +16,7 @@
 </head>
 
 <body>
-<div data-include="/_layouts/nav.html"></div>
+<div data-include="/layouts/nav.html"></div>
 <h1 id = "blog-title">Blog</h1>
 <p id = "blog-intro">
   I am always trying to do some outputs based on my thoughts. You could check
@@ -93,7 +93,7 @@
     blogTitle.style.display = 'none';
     blogIntro.style.display = 'none';
 
-    const markdownFile = `/blog/_posts/${post}.md`;
+    const markdownFile = `/blog/posts/${post}.md`;
 
     try {
       const response = await fetch(markdownFile);
@@ -130,6 +130,6 @@
   });
 </script>
 
-<div data-include="/_layouts/footer.html"></div>
+<div data-include="/layouts/footer.html"></div>
 </body>
 </html>
