@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog</title>
+  <link rel="stylesheet" type="text/css" href="/css/main.css">
+  <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script> <!-- Showdown library -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180549038-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+    gtag('config', 'UA-180549038-1');
+  </script>
+</head>
+
+<body>
+<div data-include="/_layouts/nav.html"></div>
+<h1 id = "blog-title">Blog</h1>
+<p id = "blog-intro">
+  I am always trying to do some outputs based on my thoughts. You could check
+  <a href="https://actbee.substack.com">My Substack</a> for the latest articles.
+</p>
+<ul class="posts" id="posts-list">
+  <!-- Posts will be dynamically rendered here -->
+</ul>
+<div id="post-content" style="display: none;"></div>
+<ul class="back-button">
+  <li><button id="back-button" style="display: none;">Back</button></li>
+</ul>
+
+<script>
+  function processIncludes() {
+    const includes = document.querySelectorAll('[data-include]');
+    includes.forEach(async (el) => {
+      const file = el.getAttribute('data-include');
+      try {
+        const response = await fetch(file);
+        if (response.ok) {
+          el.innerHTML = await response.text();
+        } else {
+          console.error(`Failed to load include file: ${file}`);
+        }
+      } catch (error) {
+        console.error(`Error loading include file: ${file}`, error);
+      }
+    });
+  }
+
+  async function loadMarkdownPosts() {
+    const postsList = document.getElementById('posts-list');
+    const jsonFile = '/blog/posts.json'; // Path to the JSON file
+
+    try {
+      const response = await fetch(jsonFile);
+      if (!response.ok) {
+        console.error(`Failed to load JSON file: ${jsonFile}`);
+        postsList.innerHTML = '<p>Error loading posts list.</p>';
+        return;
+      }
+
+      const markdownFiles = await response.json();
+      for (const file of markdownFiles) {
+        const listItem = document.createElement('li');
+        const link = document.createElement('a');
+        link.href = `?post=${file}`;
+        link.textContent = file.replace(/-/g, ' ');
+        link.addEventListener('click', (event) => {
+          event.preventDefault(); // Prevent default navigation
+          loadPostContent(file); // Load the post content
+        });
+        listItem.appendChild(link);
+        postsList.appendChild(listItem);
+      }
+    } catch (error) {
+      console.error(error);
+      postsList.innerHTML = '<p>Error loading posts.</p>';
+    }
+  }
+
+  async function loadPostContent(post) {
+    const postsList = document.getElementById('posts-list');
+    const postContainer = document.getElementById('post-content');
+    const backButton = document.getElementById('back-button');
+    const blogTitle = document.getElementById('blog-title');
+    const blogIntro = document.getElementById('blog-intro');
+
+    // Hide elements
+    postsList.style.display = 'none';
+    postContainer.style.display = 'block';
+    backButton.style.display = 'block';
+    blogTitle.style.display = 'none';
+    blogIntro.style.display = 'none';
+
+    const markdownFile = `/blog/_posts/${post}.md`;
+
+    try {
+      const response = await fetch(markdownFile);
+      if (!response.ok) {
+        throw new Error(`Failed to load file: ${markdownFile}`);
+      }
+
+      const markdownContent = await response.text();
+      const converter = new showdown.Converter();
+      const htmlContent = converter.makeHtml(markdownContent);
+      postContainer.innerHTML = htmlContent;
+    } catch (error) {
+      console.error(error);
+      postContainer.innerHTML = '<p>Error loading post content.</p>';
+    }
+  }
+
+  function setupBackButton() {
+    const backButton = document.getElementById('back-button');
+    backButton.addEventListener('click', () => {
+      document.getElementById('posts-list').style.display = 'block';
+      document.getElementById('post-content').style.display = 'none';
+      backButton.style.display = 'none';
+      document.getElementById('blog-title').style.display = 'block';
+      document.getElementById('blog-intro').style.display = 'block';
+    });
+  }
+
+  // Initialize the page
+  document.addEventListener('DOMContentLoaded', () => {
+    processIncludes();
+    setupBackButton();
+    loadMarkdownPosts();
+  });
+</script>
+
+<div data-include="/_layouts/footer.html"></div>
+</body>
+</html>

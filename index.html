@@ -1,48 +1,75 @@
----
-layout: default
-title: Xuedan ZOU
----
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="/js/include.js" defer></script>
+	<meta charset="UTF-8">
+	<div data-include="/_layouts/head.html"></div>
+</head>
 
+<body>
+<div data-include="/_layouts/nav.html"></div>
+<div class="container">
 
+	<p><br><br></p>
 
-         <p><br><br></p>
-
-		<div class="blurb">
-			<div align=center>
+	<div class="blurb">
+		<div align="center">
 			<h1>邹 雪丹</h1>
 			<h1>Xuedan ZOU</h1>
-            <br><br>
+			<br><br>
 			<script type="text/javascript">
-				var pic = [];
-				pic[0] = "https://github.com/actbee/actbee.github.io/blob/master/images/2.1.jpg?raw=true";
-				pic[1] = "https://github.com/actbee/actbee.github.io/blob/master/images/2.2.jpg?raw=true";
-				pic[2] = "https://github.com/actbee/actbee.github.io/blob/master/images/2.3.jpg?raw=true";
-				pic[3] = "https://github.com/actbee/actbee.github.io/blob/master/images/2.4.jpg?raw=true";
-				pic[4] = "https://github.com/actbee/actbee.github.io/blob/master/images/cover.png?raw=true";
-				pic[5] = "https://xuedananimation.wordpress.com/wp-content/uploads/2022/08/e2122345-2450-4d4b-a4c1-d02eff856359.png";
-				pic[6] = "https://xuedananimation.wordpress.com/wp-content/uploads/2022/08/1411661913933_.pic_.jpg";
+				var pic = [
+					"https://github.com/actbee/actbee.github.io/blob/master/images/2.1.jpg?raw=true",
+					"https://github.com/actbee/actbee.github.io/blob/master/images/2.2.jpg?raw=true",
+					"https://github.com/actbee/actbee.github.io/blob/master/images/2.3.jpg?raw=true",
+					"https://github.com/actbee/actbee.github.io/blob/master/images/2.4.jpg?raw=true",
+					"https://github.com/actbee/actbee.github.io/blob/master/images/cover.png?raw=true",
+					"https://xuedananimation.wordpress.com/wp-content/uploads/2022/08/e2122345-2450-4d4b-a4c1-d02eff856359.png",
+					"https://xuedananimation.wordpress.com/wp-content/uploads/2022/08/1411661913933_.pic_.jpg"
+				];
 
-				var mes = [];
-				mes[0] = "東京 Tokyo";
-				mes[1] = "史　History";
-				mes[2] = "商 Business";
-				mes[3] = "階層 Status";
-				mes[4] = "権 Power";
-				mes[5] = "美 Beautiful";
-				mes[6] = "感 Feel";
+				var mes = [
+					"東京 Tokyo",
+					"史　History",
+					"商 Business",
+					"階層 Status",
+					"権 Power",
+					"美 Beautiful",
+					"感 Feel"
+				];
 
+				// Select the container where the image and text will be inserted
+				var container = document.querySelector('.blurb div[align="center"]');
 
-			
-				var randomBgIndex = Math.round( Math.random() * 6 );
-			
-				//document.write('<style>body{background:url(' + bodyBgs[randomBgIndex] + ') no-repeat 50% 0}</style>');
-				document.write("<img src=" + pic[randomBgIndex] + " width='700px'>")
+				// Generate random indices
+				var randomBgIndex = Math.floor(Math.random() * pic.length);
 
-				randomBgIndex = Math.round( Math.random() * 6 );
-				document.write("<p>"+mes[randomBgIndex]+"</p>")
+				// Create the image element
+				var img = document.createElement('img');
+				img.src = pic[randomBgIndex];
+				img.width = 700;
+
+				// Append the image to the container
+				container.appendChild(img);
+
+				// Generate another random index for the message
+				randomBgIndex = Math.floor(Math.random() * mes.length);
+
+				// Create the paragraph element
+				var paragraph = document.createElement('p');
+				paragraph.textContent = mes[randomBgIndex];
+
+				// Append the paragraph to the container
+				container.appendChild(paragraph);
 			</script>
-           </div>
-		</div> 
-		<p><br><br></p>
+		</div>
+	</div>
+	<p><br><br></p>
 
-<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Z7ZYRKp_O9DFEvt_2YkxdESPbs1vqhD5eorXyE1cMjc&cl=ffffff&w=a"></script>
+	<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Z7ZYRKp_O9DFEvt_2YkxdESPbs1vqhD5eorXyE1cMjc&cl=ffffff&w=a"></script>
+
+</div>
+
+<div data-include="/_layouts/footer.html"></div>
+</body>
+</html>

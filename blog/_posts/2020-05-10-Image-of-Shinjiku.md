@@ -1,10 +1,6 @@
----
-layout: post
-title: "Image of Shinjiku"
-date: 2020-05-10
----
+# Image of Shinjiku, Tokyo
 
-## Image of Shinjiku, Tokyo
+posted: 2020-05-10
 
 ![shinjiku](https://github.com/actbee/actbee.github.io/blob/master/images/cover.png?raw=true)
 

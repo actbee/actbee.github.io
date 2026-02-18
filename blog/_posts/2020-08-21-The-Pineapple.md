@@ -1,8 +1,7 @@
----
-layout: post
-title: "The Pineapple"
-date: 2020-08-21
----
+# The Pineapple
+
+posted: 2020-08-21
+
 ## Introduction
 
 I once took a visual class in my undergraduate, and today I found the paintings I created on that class occasionally.

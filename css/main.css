@@ -1,55 +1,101 @@
-body { margin: 60px auto; width: 70%; }
+/* General Styles */
+body {
+    margin: 60px auto;
+    width: 70%;
+}
 
-a { text-decoration: none; color: #999; }
-a:hover { text-decoration: underline; }
+a {
+    text-decoration: none;
+    color: #999;
+}
 
-p, ul { font-size: 2em; line-height: 1.5em; color: #333; }
+a:hover {
+    text-decoration: underline;
+}
 
-h1 {font-family: 'Courier New', Courier, monospace;}
-h2, h3, h4 { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
-h1 { font-size: 5em;  }
-h2 { font-size: 4.7em; }
-h3 { font-size: 2.3em; }
-h4 { font-size: 2.9em; }
-h5 {font-family: 'Helvetica', 'Arial', 'Sans-Serif'; font-size: 0.5em }
+p, ul {
+    font-size: 2em;
+    line-height: 1.5em;
+    color: #333;
+}
 
-nav ul, footer ul { font-size: 2em; font-family: 'Helvetica', 'Arial', 'Sans-Serif'; padding: 0px; list-style: none; font-weight: bold; }
-nav ul li, footer ul li { display: inline; margin-right: 40px; }
+/* Headings */
+h1 {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 5em;
+}
+
+h2, h3, h4, h5 {
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+h2 {
+    font-size: 4.7em;
+}
+
+h3 {
+    font-size: 2.3em;
+}
+
+h4 {
+    font-size: 2.9em;
+}
+
+h5 {
+    font-size: 0.5em;
+}
+
+/* Navigation and Footer */
+nav ul, footer ul {
+    font-size: 2em;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    padding: 0;
+    list-style: none;
+    font-weight: bold;
+}
+
+nav ul li, footer ul li {
+    display: inline;
+    margin-right: 40px;
+}
 
 nav {
     display: flex;
-    align-items: center; /* Align items vertically */
-    justify-content: space-between; /* Optional: Adjust spacing between the two ul elements */
+    align-items: center;
+    justify-content: space-between;
 }
 
 nav ul {
     margin: 0;
-    padding: 0;
-    display: flex; /* Ensure the items in each ul are in a row */
+    display: flex;
     align-items: center;
 }
 
-.language-switcher {
+/* Language Switcher */
+.language-switcher, .back-button {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
     align-items: center;
+}
+
+.language-switcher {
     justify-content: flex-end;
 }
 
-.language-switcher li {
+.back-button {
+    margin: 50px 0 50px;
+}
+
+.language-switcher li, .back-button li {
     margin: 0 5px;
 }
 
-.language-switcher h5 {
-    font-size: 0.4em;
-}
-
-.language-switcher button {
+.language-switcher button, .back-button button {
     background: none;
     border: none;
-    font-size: 0.5em;
+    font-size: 0.7em;
     font-family: 'Helvetica', 'Arial', 'Sans-Serif';
     font-weight: bold;
     color: #999;
@@ -57,20 +103,92 @@ nav ul {
     padding: 0;
 }
 
-.language-switcher button:hover {
+.language-switcher button:hover, .back-button button:hover {
     text-decoration: underline;
 }
 
-footer { border-top: 1px solid #d5d5d5; font-size: .6em; }
+/* Footer */
+footer {
+    border-top: 1px solid #d5d5d5;
+    font-size: 0.6em;
+}
 
 /* Blog */
-ul.posts { margin: 40px auto 80px; font-size: 3 em; }
-ul.posts li { list-style: none; }
+ul.posts {
+    margin: 40px auto 80px;
+    font-size: 3em;
+}
+
+ul.posts li {
+    list-style: none;
+}
 
 /* CV */
-.cv { margin: 0px 0px 60px; }
-.cv h1 { font-size: 5em; }
-.cv h2 { font-size: 3em; }
-.cv address, .cv .download { font-family: 'Helvetica', 'Arial', 'Sans-Serif'; }
-.cv address, .cv p { font-size: 2em; }
-.cv .download { float: right; font-size: 2em; text-transform: uppercase; }
+.cv {
+    margin: 0 0 60px;
+}
+
+.cv h1 {
+    font-size: 5em;
+}
+
+.cv h2 {
+    font-size: 3em;
+}
+
+.cv address, .cv .download, .cv p {
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 2em;
+}
+
+.cv .download {
+    float: right;
+    text-transform: uppercase;
+}
+
+/* Adjust Markdown font size */
+#post-content h1 {
+    font-size: 3.5em; /* Set a smaller font size */
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif'; /* Ensure consistent font */
+    margin-top: 1em; /* Optional: Adjust spacing */
+    margin-bottom: 0.5em;
+}
+
+#post-content h2 {
+    font-size: 2.5em; /* Set a smaller font size */
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif'; /* Ensure consistent font */
+    margin-top: 1em; /* Optional: Adjust spacing */
+    margin-bottom: 0.5em;
+}
+
+#post-content h3 {
+    font-size: 2em; /* Set a smaller font size */
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif'; /* Ensure consistent font */
+    margin-top: 1em; /* Optional: Adjust spacing */
+    margin-bottom: 0.5em;
+}
+
+#post-content h4 {
+    font-size: 1.5em; /* Set a smaller font size */
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif'; /* Ensure consistent font */
+    margin-top: 1em; /* Optional: Adjust spacing */
+    margin-bottom: 0.5em;
+}
+
+#post-content p {
+    font-size: 1.5em; /* Set a smaller font size */
+}
+
+#post-content li {
+    font-size: 1.5em; /* Increase the font size */
+    line-height: 1.8em; /* Optional: Adjust line height for better readability */
+    margin-bottom: 0.5em; /* Optional: Add spacing between list items */
+}
+
+/* Style the list inside <details> */
+details ul {
+    font-size: 1em; /* Adjust font size */
+    line-height: 1.8em; /* Adjust line height for readability */
+    margin-left: 20px; /* Add left margin for indentation */
+    color: #555; /* Change text color */
+}

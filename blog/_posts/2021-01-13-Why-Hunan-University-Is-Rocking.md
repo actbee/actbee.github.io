@@ -1,8 +1,6 @@
----
-layout: post
-title: "Why Hunan University Is Rocking"
-date: 2021-01-13
----
+# Why Hunan University Is Rocking
+
+posted: 2021-01-13
 
 Though I have to say that once before I once hated being in Hunan University(mostly because of some political
 reasons and its bureaucratism atmosphore in some parts), I do want to list the points which make the university

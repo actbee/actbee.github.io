@@ -1,22 +1,18 @@
----
-layout: post
-title: "Coding Style Guideline"
-date: 2026-02-17
----
+# Coding Style Guideline
 
-## Coding Style Guideline
+posted: 2026-02-17
 
 This document serves as a comprehensive guideline for developers, outlining best practices and standards for writing high-quality code. The guideline takes a reference from The Art of Readable Code: Simple and Practical Techniques for Writing Better Code (by Dustin Boswell and Trevor Foucher) (https://www.amazon.com/Art-Readable-Code-Practical-Techniques/dp/0596802293)
 
 
-### The Core Principle
+## The Core Principle
 The paramount principle guiding all coding practices is: Code must be easy to understand. The primary objective is to minimize the time required for any developer to comprehend existing code. If this principle conflicts with other guidelines, the ease of understanding takes precedence.
 
-### Part 1: Surface-Level Improvements
-#### 1. Meaningful Naming
+## Part 1: Surface-Level Improvements
+### 1. Meaningful Naming
 Effective naming is crucial for code clarity. Names should convey information about their purpose, value, and context.
 
-##### Professional Terminology: 
+#### Professional Terminology: 
 Choose precise and professional verbs and nouns.
 Examples:
 send → deliver, dispatch, announce, distribute, route
@@ -24,13 +20,13 @@ find → search, extract, locate, recover
 start → launch, create, begin, open
 make → create, set up, build, generate, compose, add, new
 
-##### Descriptive and Specific: 
+#### Descriptive and Specific: 
 Names should describe the variable's purpose or the value it holds. Avoid vague terms like "tmp". Use concrete names instead of abstract ones.
-##### Contextual Suffixes/Prefixes: 
+#### Contextual Suffixes/Prefixes: 
 Append units to names where applicable (e.g., delay_secs, html_utf8). This is for clarity, not Hungarian notation.
-##### Scope-Dependent Length: 
+#### Scope-Dependent Length: 
 Use shorter names for smaller scopes. For larger scopes, names must be sufficiently informative. Avoid project-specific or obscure acronyms that new team members might not understand (e.g., BackEndManager instead of BEManager).
-##### Consistent Formatting: 
+#### Consistent Formatting: 
 Leverage naming conventions to convey meaning. 
 
 CamelCase for class names. 
@@ -40,57 +36,57 @@ lower_separated (snake_case) for variable names.
 ALL_CAPS for constants. 
 
 Consider a trailing underscore for class member variables (e.g., offset_) if it enhances clarity in your language/framework.
-##### Adhere to Language Conventions: 
+#### Adhere to Language Conventions: 
 Follow established naming conventions for the specific programming language in use. Maintain absolute consistency within the project. 
 
-#### Unambiguous Naming
+### Unambiguous Naming
 Names must prevent misinterpretation.
 
-##### Range Delimiters:
+#### Range Delimiters:
 Use min_ and max_ prefixes for lower and upper bounds. 
 
 For inclusive ranges[start, end], use first and last. 
 
 For inclusive/exclusive ranges[begin, end), use begin and end. 
 
-##### Boolean Clarity:
+#### Boolean Clarity:
 Use prefixes like is, has, can, or should to make boolean variables explicit (e.g., is_valid, has_permission). Avoid negative phrasing (e.g., use_ssl is better than disable_ssl as positive phrasing is easier for human cognition).
-##### Match Expectations: 
+#### Match Expectations: 
 Name operations to reflect their computational cost. Use compute for heavy operations rather than get, which implies a lightweight retrieval. 
 
-#### 3.Code Aesthetics
+### 3.Code Aesthetics
 Visually appealing code is easier to scan and understand.
 
-##### Consistent Layout: 
+#### Consistent Layout: 
 Employ a consistent indentation, spacing, and bracket style. Consistency is more important than absolute adherence to a specific style if a consistent, project-wide style is already in place. 
 
-##### Visual Similarity: 
+#### Visual Similarity: 
 Make similar code constructs look similar. 
 
-##### Logical Grouping: 
+#### Logical Grouping: 
 Group related lines of code into distinct blocks, often separated by blank lines, to form logical paragraphs. 
 
-##### Readability-Driven Formatting:
+#### Readability-Driven Formatting:
 Strategic Line Breaks: Rearrange lines to maintain consistency and compactness. 
 
 Method Extraction: Refactor irregular or complex segments into well-named methods. 
 
 Column Alignment: Use column alignment for related items (e.g., variable declarations, assignment operators) when it significantly enhances readability, even if it introduces additional whitespace. 
 
-##### Meaningful Order: 
+#### Meaningful Order: 
 Arrange elements (e.g., declarations, methods) in a logical order (e.g., alphabetical, by importance, by logical grouping). 
 
-#### Effective Commenting
+### Effective Commenting
 Comments should clarify code, not compensate for its poor quality. Good code > bad code + good comments.
 
-##### When to Comment: 
+#### When to Comment: 
 Add comments when the code's intent is not immediately obvious, or to highlight important caveats and potential pitfalls.
-##### What Not to Comment:
+#### What Not to Comment:
 Do not comment on facts that are quickly inferable from the code itself. 
 
 Avoid "crutch comments" that attempt to justify or explain poorly written code; instead, improve the code. 
 
-##### Document Intent and Context:
+#### Document Intent and Context:
 Guiding Annotations: Explain the "why" behind non-obvious design decisions or complex logic. 
 
 Flaw Comments: Use standard tags for known issues: TODO (incomplete), FIXME (broken/non-functional), HACK (suboptimal workaround), XXX (dangerous/critical warning). 
@@ -101,7 +97,7 @@ Reader's Perspective: Anticipate what a reader needs to know. Comment on potenti
 
 Summary Comments: Offer high-level summaries for complex code blocks to aid quick understanding without delving into details. 
 
-##### Concise Comments:
+#### Concise Comments:
 High Information Density: Comments should have a high information-to-space ratio. 
 
 Avoid Ambiguous Pronouns: Use specific code names instead of vague pronouns like "it." 
@@ -118,8 +114,8 @@ Informative Words: Use industry-standard, information-rich terminology.
 
 Named Parameters: For languages that support it, use named parameters in function calls to improve readability (e.g., f(timeout=1)). 
 
-### Part 2: Simplifying Control Flow and Logic
-#### 1. Readable Control Flow
+## Part 2: Simplifying Control Flow and Logic
+### 1. Readable Control Flow
 Control flow should be intuitive and easy to trace.
 
 Conditional Argument Order: In if statements, place the varying value on the left and the constant/comparison value on the right (e.g., variable == CONSTANT). 
@@ -144,7 +140,7 @@ continue in Loops: Use continue to skip iterations and reduce nesting within loo
 
 Clarity of Execution Flow: Use advanced control flow mechanisms (e.g., multi-threading, signals, exceptions, anonymous functions, virtual methods) judiciously, as they can obscure the program's execution path. 
 
-#### 2. Breaking Down Overlong Expressions
+### 2. Breaking Down Overlong Expressions
 The human brain typically manages only 3-4 items simultaneously. Long expressions are harder to comprehend.
 
 Introduce Explanatory Variables: Break down complex expressions into smaller, named variables that clarify their intermediate steps.
@@ -162,7 +158,7 @@ Consider the Inverse: Sometimes, simplifying a logical expression is easier by t
 
 Extract Repeated Expressions: Replace identical complex expressions with a single, named variable. 
 
-#### 3. Variables and Readability
+### 3. Variables and Readability
 Careless variable usage significantly hinders program comprehension.
 
 Minimize Variables:
@@ -183,8 +179,8 @@ Define Close to Use: Declare variables as close as possible to their first use.
 
 "Write Once" Variables: Favor immutable variables (const, final, val) where possible, as their values are constant and easier to reason about. Minimize the number of locations where a variable's value can be modified. 
 
-### Part 3: Code Organization and Design
-#### 1. Extract Unrelated Subproblems
+## Part 3: Code Organization and Design
+### 1. Extract Unrelated Subproblems
 Actively extracting unrelated subproblems allows readers to focus on the higher-level goals of the program by abstracting away details.
 
 Self-Contained Logic: Identify self-contained functionalities that are independent of their calling context. 
@@ -196,7 +192,7 @@ Simplify Interfaces: Create helper functions to simplify interactions with compl
 Balance Extraction: Avoid over-extraction; too many small functions can increase cognitive overhead due to frequent jumps between them. 
 
 
-#### 2. Do One Thing (Single Responsibility Principle)
+### 2. Do One Thing (Single Responsibility Principle)
    Each function, method, or class should have a single, well-defined responsibility.
 
 Task Decomposition: 
@@ -209,7 +205,7 @@ Logical Paragraphing: For complex methods, mentally (or physically with comments
 
 Introduce Helper Functions: Utilize helper functions to encapsulate sub-tasks, making the main function's purpose clearer. 
 
-#### 3. Translate Ideas into Code
+### 3. Translate Ideas into Code
 A systematic approach to translating requirements into clear code: 
 
 Natural Language Description: Describe the code's intended functionality in natural language, as if explaining it to a colleague. 
@@ -223,7 +219,7 @@ Leverage Libraries: Familiarize yourself with standard library functions and mod
 Recursive Thinking: For problems with self-similar sub-problems, consider recursive solutions. 
 
 
-#### 4. Write Less Code
+### 4. Write Less Code
 The most readable and maintainable code is often the least code.
 
 Avoid Premature Optimization/Features: Do not implement functionality that is not currently required. 
@@ -242,7 +238,7 @@ Code "Weight": Be willing to delete code, even if it represents prior effort, if
 
 Library Familiarity: Regularly review the functions, modules, and types available in your programming language's standard library and commonly used third-party libraries. 
 
-#### 5. Testability and Readability
+### 5. Testability and Readability
 Tests are an integral part of the codebase and must also be readable and maintainable.
 
 Descriptive Test Names: Test function names should clearly indicate what is being tested (class, function, scenario/bug). Length is not a concern for test names. 

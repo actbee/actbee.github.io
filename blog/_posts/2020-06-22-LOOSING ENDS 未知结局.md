@@ -1,9 +1,6 @@
----
-layout: post
-title: "LOOSING ENDS (IN CHINESE)"
-data: 2020-07-12
----
+# LOOSING ENDS 未知结局
 
+posted: 2020-06-22
 
 现在因为疫情，很魔幻地被迫进入了gap阶段，终于还是走到了这一步了，在如何充分利用这一年之前有必要梳理下本科的轨迹和想法。
 

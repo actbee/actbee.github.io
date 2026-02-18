@@ -1,10 +1,6 @@
----
-layout: post
-title: "Behavior Guideline: Crucial Conversations:Tools for Talking When Stakes Are."
-date: 2026-02-17
----
+# Behavior Guideline: Crucial Conversations:Tools for Talking When Stakes Are.
 
-## Behavior Guideline: Crucial Conversations:Tools for Talking When Stakes Are.
+posted: 2026-02-17
 
 Below are some key take aways after finishing the book Crucial Conversations: Tools for Talking When Stakes Are High (https://www.amazon.co.jp/Crucial-Conversations-Tools-Talking-Stakes/dp/1469266822).
 
@@ -12,14 +8,14 @@ It could be considered as a behavior guide within the team when such crucial con
 
 
 
-### 1.When will the crucial conversation happen?
+## 1.When will the crucial conversation happen?
 "Crucial Conversations" provides invaluable tools for navigating complex human interactions characterized by high stakes, strong emotions, and differing opinions. The core objective is to build a "Pool of Shared Meaning", allowing for the free flow of information to achieve mutual understanding and preserve relationships.
 
 That means, if the conversation topic is important, and the people inside the conversation hold very different prospectives, and they are emotional, then the crucial conversation happens and this guide should help for such occasions.
 
 
 
-### 2.How to start the crucial conversation?
+## 2.How to start the crucial conversation?
 Before starting the conversation, critically examine your true intentions. Ask yourself to clarify your purpose:
 
 What do I want for myself?
@@ -46,7 +42,7 @@ Use words to describe the emotion: Find out what is the emotion that cause you t
 Analyze the idea: Keep asking what is the idea behind your current emotion.
 Seek facts: Differentiate between facts and your interpretations. Challenge negative ideas by finding objective evidence that confirms or disproves them. Focus on the reality, not your judgement!
 
-### 3.How to conduct the crucial conversation?
+## 3.How to conduct the crucial conversation?
 The success of a crucial conversation hinges on creating a safe environment. The discussion contents (what you are discussing about) and the vibe (the way you discuss) should be fully concerned. Monitor the atmosphere for signs of violated safety, such as Silence (masking, avoiding, withdrawing) or Violence (controlling, labeling, attacking). When safety is threatened, pause the content discussion and prioritize restoring safety.
 
 When you notify the conversation is not in a safe environment, you should stop the current discussion and make additional efforts to rebuild the safe environment. To build this safe environment, you need  to make your opposite believe that:
@@ -87,7 +83,7 @@ Handle Disagreements: Find points of Agreeing (where you truly concur), Adding (
 "Yes I truly agree with your point that xxxxxx. In addition, I do notify that ........ So maybe we hold a little bit different views on this, from my perspective it is like ...... + STATE statement"
 When faced with harsh feedback, employ the CURE model: Collect yourself (be calm), Understand (ask the opposite to take some examples, and then listen), Recover (ask for a pause if needed), and Engage (identify what's true/acceptable and calmly respond).
 
-### 4.How to end the crucial conversation?
+## 4.How to end the crucial conversation?
 Before ending a conversation, both sides should determine "who decides" and communicate the decision-making method (Command, Consult, Vote, and Consensus).  Ensure the right people are involved: those who are concerned, informed, supported, and engaged. The goal is to involve the minimum number of people while securing sufficient support for high-quality decisions. Also, please involve some people with rights/influence in the organization to involve in the decision making (so they will not disagree with you in public potentially). After the decision-making method is decided, be sure to announce it to all of the other members.
 
 Use the WWWF framework for clear commitments:
