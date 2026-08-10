@@ -185,6 +185,118 @@ ul.posts li {
     margin-bottom: 0.5em; /* Optional: Add spacing between list items */
 }
 
+/* Artwork Gallery */
+.artwork-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0 80px;
+}
+
+.artwork-item {
+    cursor: pointer;
+}
+
+.artwork-item img {
+    width: 100%;
+    display: block;
+    border: 1px solid #d5d5d5;
+    transition: opacity 0.2s;
+}
+
+.artwork-item:hover img {
+    opacity: 0.8;
+}
+
+.artwork-label {
+    font-size: 1.4em;
+    color: #666;
+    margin: 8px 0 0;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+}
+
+/* Artwork Modal */
+.artwork-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.artwork-modal.is-open {
+    display: flex;
+}
+
+.artwork-modal-content {
+    position: relative;
+    background: #fff;
+    max-width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 40px;
+}
+
+.artwork-modal-info {
+    margin-top: 20px;
+}
+
+.artwork-modal-caption {
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 1.4em;
+    color: #666;
+    margin: 0;
+}
+
+.artwork-modal-images {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.artwork-modal-images img {
+    width: 100%;
+    display: block;
+    border: 1px solid #d5d5d5;
+}
+
+.artwork-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 2.5em;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Zoom overlay */
+.artwork-zoom {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.95);
+    z-index: 1100;
+    align-items: center;
+    justify-content: center;
+    cursor: zoom-out;
+}
+
+.artwork-zoom.is-open {
+    display: flex;
+}
+
+.artwork-zoom img {
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    display: block;
+}
+
 /* Style the list inside <details> */
 details ul {
     font-size: 1em; /* Adjust font size */

@@ -25,19 +25,22 @@ const I18N = {
         "nav.home": "Home",
         "nav.about": "About",
         "nav.blog": "Blog",
-        "nav.project": "Project"
+        "nav.project": "Project",
+        "nav.artwork": "Artwork"
     },
     zh: {
         "nav.home": "主页",
         "nav.about": "关于",
         "nav.blog": "博客",
-        "nav.project": "项目"
+        "nav.project": "项目",
+        "nav.artwork": "艺术"
     },
     ja: {
         "nav.home": "ホーム",
         "nav.about": "自己紹介",
         "nav.blog": "ブログ",
-        "nav.project": "プロジェクト"
+        "nav.project": "プロジェクト",
+        "nav.artwork": "アートワーク"
     }
 };
 
