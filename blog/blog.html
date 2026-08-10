@@ -95,7 +95,7 @@
     blogTitle.style.display = 'none';
     blogIntro.style.display = 'none';
 
-    const markdownFile = `/blog/posts/${post}.md`;
+    const markdownFile = `/blog/posts/${encodeURIComponent(post)}.md`;
 
     try {
       const response = await fetch(markdownFile);
