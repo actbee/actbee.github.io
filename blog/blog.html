@@ -17,26 +17,30 @@
 
 <body>
 <div data-include="/layouts/nav.html"></div>
-<h1 id="blog-title-en" data-lang="en">Blog</h1>
-<h1 id="blog-title-zh" data-lang="zh" hidden>博客</h1>
-<h1 id="blog-title-ja" data-lang="ja" hidden>ブログ</h1>
+<div id="blog-title">
+  <h1 id="blog-title-en" data-lang="en">Blog</h1>
+  <h1 id="blog-title-zh" data-lang="zh" hidden>博客</h1>
+  <h1 id="blog-title-ja" data-lang="ja" hidden>ブログ</h1>
+</div>
 
-<p id="blog-intro-en" data-lang="en">
-  I am always trying to do some outputs based on my thoughts. You could check
-  <a href="https://actbee.substack.com">My Substack</a> for the latest articles.
-</p>
+<div id="blog-intro">
+  <p id="blog-intro-en" data-lang="en">
+    I am always trying to do some outputs based on my thoughts. You could check
+    <a href="https://actbee.substack.com">My Substack</a> for the latest articles.
+  </p>
 
-<p id="blog-intro-zh" data-lang="zh" hidden>
-  他一直在尝试把自己的想法整理成文字输出。您可以在
-  <a href="https://actbee.substack.com">My Substack</a>
-  查看最新文章。
-</p>
+  <p id="blog-intro-zh" data-lang="zh" hidden>
+    他一直在尝试把自己的想法整理成文字输出。您可以在
+    <a href="https://actbee.substack.com">My Substack</a>
+    查看最新文章。
+  </p>
 
-<p id="blog-intro-ja" data-lang="ja" hidden>
-  自分の考えを言語化して発信するようにしています。最新の記事は
-  <a href="https://actbee.substack.com">My Substack</a>
-  でご覧いただけます。
-</p>
+  <p id="blog-intro-ja" data-lang="ja" hidden>
+    自分の考えを言語化して発信するようにしています。最新の記事は
+    <a href="https://actbee.substack.com">My Substack</a>
+    でご覧いただけます。
+  </p>
+</div>
 <ul class="posts" id="posts-list">
   <!-- Posts will be dynamically rendered here -->
 </ul>
@@ -46,23 +50,6 @@
 </ul>
 
 <script>
-  function processIncludes() {
-    const includes = document.querySelectorAll('[data-include]');
-    includes.forEach(async (el) => {
-      const file = el.getAttribute('data-include');
-      try {
-        const response = await fetch(file);
-        if (response.ok) {
-          el.innerHTML = await response.text();
-        } else {
-          console.error(`Failed to load include file: ${file}`);
-        }
-      } catch (error) {
-        console.error(`Error loading include file: ${file}`, error);
-      }
-    });
-  }
-
   async function loadMarkdownPosts() {
     const postsList = document.getElementById('posts-list');
     const jsonFile = '/blog/posts.json'; // Path to the JSON file
@@ -139,7 +126,6 @@
 
   // Initialize the page
   document.addEventListener('DOMContentLoaded', () => {
-    processIncludes();
     setupBackButton();
     loadMarkdownPosts();
   });
