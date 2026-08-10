@@ -304,3 +304,115 @@ details ul {
     margin-left: 20px; /* Add left margin for indentation */
     color: #555; /* Change text color */
 }
+
+/* Project Gallery */
+.project-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 30px;
+    margin: 40px 0 80px;
+}
+
+.project-item {
+    cursor: pointer;
+}
+
+.project-item img {
+    width: 100%;
+    display: block;
+    border: 1px solid #d5d5d5;
+    transition: opacity 0.2s;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-item:hover img {
+    opacity: 0.8;
+}
+
+.project-label {
+    font-size: 1.4em;
+    color: #333;
+    margin: 8px 0 0;
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    font-weight: bold;
+}
+
+/* Project Modal */
+.project-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-modal.is-open {
+    display: flex;
+}
+
+.project-modal-content {
+    position: relative;
+    background: #fff;
+    max-width: 700px;
+    width: 90vw;
+    max-height: 90vh;
+    overflow-y: auto;
+    padding: 40px;
+}
+
+.project-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    background: none;
+    border: none;
+    font-size: 2.5em;
+    line-height: 1;
+    cursor: pointer;
+    color: #333;
+}
+
+.project-modal-img {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.project-modal-img img {
+    width: 100%;
+    display: block;
+    border: 1px solid #d5d5d5;
+}
+
+.project-modal-title {
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 2em;
+    font-weight: bold;
+    color: #333;
+    margin: 0 0 12px;
+}
+
+.project-modal-desc {
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 1.4em;
+    color: #555;
+    line-height: 1.6;
+    margin: 0 0 20px;
+}
+
+.project-modal-link {
+    font-family: 'Helvetica', 'Arial', 'Sans-Serif';
+    font-size: 1.4em;
+    color: #333;
+    text-decoration: none;
+    border-bottom: 1px solid #333;
+    padding-bottom: 2px;
+}
+
+.project-modal-link:hover {
+    color: #666;
+    border-color: #666;
+    text-decoration: none;
+}
