@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script src="/js/include.js" defer></script>
+	<meta charset="UTF-8">
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180549038-1"></script>
+	<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Z7ZYRKp_O9DFEvt_2YkxdESPbs1vqhD5eorXyE1cMjc"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+		function gtag(){dataLayer.push(arguments);}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-180549038-1');
+	</script>
+
+	<title>Artwork</title>
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+</head>
+<body>
+<div data-include="/layouts/nav.html"></div>
+<div class="container">
+	<p><br></p>
+	<h1 data-lang="en">Artwork</h1>
+	<h1 data-lang="zh" hidden>艺术</h1>
+	<h1 data-lang="ja" hidden>アートワーク</h1>
+	<p data-lang="en">A collection of my paintings. Click a series to view all works.</p>
+	<p data-lang="zh" hidden>我的绘画作品集。点击系列查看全部作品。</p>
+	<p data-lang="ja" hidden>私の絵画コレクション。シリーズをクリックして全作品を見る。</p>
+
+	<div class="artwork-gallery">
+		<div class="artwork-item" onclick="openSeries('2026_Aug')">
+			<img src="/images/artworks/2026_Aug_a.jpg" alt="2026 Aug" />
+			<p class="artwork-label">2026 Aug</p>
+		</div>
+		<div class="artwork-item" onclick="openSeries('2026_June')">
+			<img src="/images/artworks/2026_June_a.jpg" alt="2026 June" />
+			<p class="artwork-label">2026 June</p>
+		</div>
+		<div class="artwork-item" onclick="openSeries('2026_April')">
+			<img src="/images/artworks/2026_April_a.jpg" alt="2026 April" />
+			<p class="artwork-label">2026 April</p>
+		</div>
+	</div>
+	<p><br><br></p>
+</div>
+
+<!-- Series modal -->
+<div id="artwork-modal" class="artwork-modal" onclick="closeModal()">
+	<div class="artwork-modal-content" onclick="event.stopPropagation()">
+		<button class="artwork-modal-close" onclick="closeModal()">&times;</button>
+		<div id="artwork-modal-images" class="artwork-modal-images"></div>
+		<div id="artwork-modal-info" class="artwork-modal-info"></div>
+	</div>
+</div>
+
+<!-- Zoom overlay -->
+<div id="artwork-zoom" class="artwork-zoom" onclick="closeZoom()">
+	<img id="artwork-zoom-img" src="" alt="" />
+</div>
+
+<div data-include="/layouts/footer.html"></div>
+
+<script>
+	const SERIES = {
+		'2026_Aug': {
+			images: [
+				'/images/artworks/2026_Aug_a.jpg',
+				'/images/artworks/2026_Aug_b.jpg'
+			],
+			info: 'California Blue · August 2026 · Acrylic Painting · 455 × 380'
+		},
+		'2026_June': {
+			images: [
+				'/images/artworks/2026_June_a.jpg',
+				'/images/artworks/2026_June_b.jpg',
+				'/images/artworks/2026_June_c.jpg',
+				'/images/artworks/2026_June_d.jpg'
+			],
+			info: '28 Years Old · June 2026 · Acrylic Painting · 455 × 455'
+		},
+		'2026_April': {
+			images: [
+				'/images/artworks/2026_April_a.jpg',
+				'/images/artworks/2026_April_b.jpg',
+				'/images/artworks/2026_April_c.jpg',
+				'/images/artworks/2026_April_d.jpg',
+				'/images/artworks/2026_April_e.jpg'
+			],
+			info: 'Figure Practice · Jan~May 2026 · Drawing · 420 × 297'
+		}
+	};
+
+	function openSeries(name) {
+		const series = SERIES[name];
+		if (!series) return;
+
+		document.getElementById('artwork-modal-images').innerHTML = series.images.map(src =>
+			`<img src="${src}" alt="${name}" style="cursor:zoom-in" onclick="openZoom(event, this.src)" />`
+		).join('');
+
+		document.getElementById('artwork-modal-info').innerHTML = series.info
+			? `<p class="artwork-modal-caption">${series.info}</p>`
+			: '';
+
+		document.getElementById('artwork-modal').classList.add('is-open');
+		document.body.style.overflow = 'hidden';
+	}
+
+	function closeModal() {
+		document.getElementById('artwork-modal').classList.remove('is-open');
+		document.body.style.overflow = '';
+	}
+
+	function openZoom(e, src) {
+		e.stopPropagation();
+		document.getElementById('artwork-zoom-img').src = src;
+		document.getElementById('artwork-zoom').classList.add('is-open');
+	}
+
+	function closeZoom() {
+		document.getElementById('artwork-zoom').classList.remove('is-open');
+	}
+
+	document.addEventListener('keydown', (e) => {
+		if (e.key === 'Escape') {
+			if (document.getElementById('artwork-zoom').classList.contains('is-open')) {
+				closeZoom();
+			} else {
+				closeModal();
+			}
+		}
+	});
+</script>
+</body>
+</html>
