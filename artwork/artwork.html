@@ -1,20 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<script src="/js/include.js" defer></script>
 	<meta charset="UTF-8">
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-180549038-1"></script>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23d93a1c'/%3E%3C/svg%3E">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+SC:wght@400;600&display=swap">
+	<script src="/js/analytics.js" defer></script>
 	<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Z7ZYRKp_O9DFEvt_2YkxdESPbs1vqhD5eorXyE1cMjc"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag(){dataLayer.push(arguments);}
-		gtag('js', new Date());
 
-		gtag('config', 'UA-180549038-1');
-	</script>
-
-	<title>Artwork</title>
+	<title>Artwork · Xuedan Zou</title>
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 <body>
@@ -24,9 +21,9 @@
 	<h1 data-lang="en">Artwork</h1>
 	<h1 data-lang="zh" hidden>艺术</h1>
 	<h1 data-lang="ja" hidden>アートワーク</h1>
-	<p data-lang="en">A collection of my paintings. Click a series to view all works.</p>
-	<p data-lang="zh" hidden>我的绘画作品集。点击系列查看全部作品。</p>
-	<p data-lang="ja" hidden>私の絵画コレクション。シリーズをクリックして全作品を見る。</p>
+	<p data-lang="en">A collection of my paintings and drawings. Click a series to view all works.</p>
+	<p data-lang="zh" hidden>我的绘画与素描作品集。点击系列查看全部作品。</p>
+	<p data-lang="ja" hidden>私の絵画とドローイングのコレクション。シリーズをクリックすると、全作品をご覧いただけます。</p>
 
 	<div class="artwork-gallery">
 		<div class="artwork-item" onclick="openSeries('2026_Sep')">
@@ -38,12 +35,12 @@
 			<p class="artwork-label">2026 Aug</p>
 		</div>
 		<div class="artwork-item" onclick="openSeries('2026_June')">
-			<img src="/images/artworks/2026_June_a.jpg" alt="2026 June" />
-			<p class="artwork-label">2026 June</p>
+			<img src="/images/artworks/2026_June_a.jpg" alt="2026 Jun" />
+			<p class="artwork-label">2026 Jun</p>
 		</div>
 		<div class="artwork-item" onclick="openSeries('2026_April')">
-			<img src="/images/artworks/2026_April_a.jpg" alt="2026 April" />
-			<p class="artwork-label">2026 April</p>
+			<img src="/images/artworks/2026_April_a.jpg" alt="2026 Apr" />
+			<p class="artwork-label">2026 Apr</p>
 		</div>
 	</div>
 	<p><br><br></p>
@@ -73,14 +70,14 @@
 				'/images/artworks/2026_Sep_b.jpg',
 				'/images/artworks/2026_Sep_c.jpg'
 			],
-			info: 'Woman In The Water · September 2026 · Acrylic Painting · 455 × 380'
+			info: 'Woman in the Water · September 2026 · Acrylic painting · 455 × 380 mm'
 		},
 		'2026_Aug': {
 			images: [
 				'/images/artworks/2026_Aug_a.jpg',
 				'/images/artworks/2026_Aug_b.jpg'
 			],
-			info: 'California Blue · August 2026 · Acrylic Painting · 455 × 380'
+			info: 'California Blue · August 2026 · Acrylic painting · 455 × 380 mm'
 		},
 		'2026_June': {
 			images: [
@@ -89,7 +86,7 @@
 				'/images/artworks/2026_June_c.jpg',
 				'/images/artworks/2026_June_d.jpg'
 			],
-			info: '28 Years Old · June 2026 · Acrylic Painting · 455 × 455'
+			info: '28 Years Old · June 2026 · Acrylic painting · 455 × 455 mm'
 		},
 		'2026_April': {
 			images: [
@@ -99,7 +96,7 @@
 				'/images/artworks/2026_April_d.jpg',
 				'/images/artworks/2026_April_e.jpg'
 			],
-			info: 'Figure Practice · Jan~May 2026 · Drawing · 420 × 297'
+			info: 'Figure Practice · Jan–May 2026 · Drawing · 420 × 297 mm'
 		}
 	};
 

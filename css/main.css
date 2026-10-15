@@ -422,3 +422,760 @@ details ul {
     border-color: #666;
     text-decoration: none;
 }
+
+/* Refinements */
+[hidden] {
+    display: none !important;
+}
+
+img {
+    max-width: 100%;
+}
+
+a {
+    transition: color 0.2s;
+}
+
+a:hover {
+    color: #333;
+}
+
+nav a {
+    color: #999;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+    color: #333;
+}
+
+.language-switcher button[aria-pressed="true"] {
+    color: #333;
+}
+
+footer ul li a {
+    color: #999;
+}
+
+footer .fine {
+    margin: 0 0 1em;
+    font-size: 1.4em;
+    color: #999;
+}
+
+.artwork-item img,
+.project-item img {
+    transition: opacity 0.2s;
+}
+
+.contacts {
+    list-style: none;
+    padding: 0;
+}
+
+.contacts li {
+    display: inline;
+    margin-right: 40px;
+}
+
+@media (max-width: 800px) {
+    body {
+        width: 90%;
+        margin: 30px auto;
+    }
+
+    h1 { font-size: 3em; }
+    h2 { font-size: 2.6em; }
+    p, ul { font-size: 1.4em; }
+
+    nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+    }
+
+    nav ul li {
+        margin-right: 20px;
+    }
+
+    .language-switcher {
+        margin-top: 10px;
+    }
+}
+
+/* ==========================================================================
+   Personal touches: vermilion seal, gallery-label captions, quiet motion
+   ========================================================================== */
+
+:root {
+    --accent: #d93a1c;
+    --mono: 'Courier New', Courier, monospace;
+}
+
+::selection {
+    background: var(--accent);
+    color: #fff;
+}
+
+body {
+    animation: settle 0.8s ease-out both;
+}
+
+@keyframes settle {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+/* short vermilion rule above every page title */
+.about > h1:not([hidden])::before,
+.container > h1:not([hidden])::before,
+#blog-title h1:not([hidden])::before {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 4px;
+    margin-bottom: 28px;
+    background: var(--accent);
+}
+
+h1 {
+    letter-spacing: -0.03em;
+}
+
+/* nav: underline the current page in vermilion */
+nav ul li a {
+    padding-bottom: 4px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.2s, border-color 0.2s;
+}
+
+nav ul li a:hover {
+    text-decoration: none;
+}
+
+nav ul li a[aria-current="page"] {
+    border-bottom-color: var(--accent);
+}
+
+.language-switcher button {
+    font-family: var(--mono);
+    font-weight: normal;
+    letter-spacing: 0.08em;
+}
+
+/* --- Home --- */
+/* --- About --- */
+.about > p {
+    max-width: 38em;
+}
+
+.self-img img {
+    display: block;
+    transform: rotate(-1deg);
+    box-shadow: 0 20px 30px -22px rgba(0, 0, 0, 0.45);
+}
+
+.contacts li a {
+    font-family: var(--mono);
+    letter-spacing: 0.06em;
+    border-bottom: 1px solid #333;
+    color: #333;
+}
+
+.contacts li a:hover {
+    text-decoration: none;
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* --- Galleries: numbered gallery labels --- */
+.artwork-gallery,
+.project-gallery {
+    counter-reset: plate;
+    gap: 56px 36px;
+}
+
+.artwork-item,
+.project-item {
+    counter-increment: plate;
+}
+
+.artwork-label,
+.project-label {
+    display: flex;
+    gap: 14px;
+    align-items: baseline;
+    margin: 14px 0 0;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+    font-family: var(--mono);
+    font-size: 1.1rem;
+    font-weight: normal;
+    color: #333;
+    overflow-wrap: anywhere;
+}
+
+.artwork-label::before,
+.project-label::before {
+    content: counter(plate, decimal-leading-zero);
+    color: var(--accent);
+}
+
+.artwork-item img {
+    border: 0;
+    transition: transform 0.6s ease, box-shadow 0.6s ease;
+}
+
+.artwork-item:hover img {
+    opacity: 1;
+    transform: translateY(-6px);
+    box-shadow: 0 24px 30px -24px rgba(0, 0, 0, 0.5);
+}
+
+@media (min-width: 900px) {
+    .artwork-item:nth-child(even) {
+        margin-top: 56px;
+    }
+}
+
+.project-item {
+    overflow: hidden;
+}
+
+.project-item img {
+    border: 0;
+    filter: grayscale(1);
+    transition: filter 0.5s ease, transform 0.6s ease;
+}
+
+.project-item:hover img {
+    opacity: 1;
+    filter: none;
+    transform: scale(1.03);
+}
+
+.artwork-modal-caption {
+    font-family: var(--mono);
+    font-size: 1.1rem;
+    color: #333;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+}
+
+.project-modal-title {
+    font-family: var(--mono);
+}
+
+.project-modal-link {
+    font-family: var(--mono);
+    border-bottom-color: var(--accent);
+}
+
+.project-modal-link:hover {
+    color: var(--accent);
+    border-color: var(--accent);
+}
+
+/* --- Blog: an index, not a list --- */
+ul.posts {
+    font-size: 1.5em;
+    margin: 48px 0 80px;
+    padding: 0;
+    border-top: 1px solid #333;
+    counter-reset: post;
+}
+
+ul.posts li {
+    counter-increment: post;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+ul.posts li a {
+    display: flex;
+    gap: 24px;
+    align-items: baseline;
+    padding: 16px 0;
+    color: #555;
+    transition: padding-left 0.3s ease, color 0.2s;
+}
+
+ul.posts li a::before {
+    content: counter(post, decimal-leading-zero);
+    font-family: var(--mono);
+    font-size: 0.6em;
+    color: var(--accent);
+}
+
+ul.posts li a:hover {
+    text-decoration: none;
+    padding-left: 12px;
+    color: #111;
+}
+
+#post-content {
+    max-width: 40em;
+}
+
+.back-button button {
+    font-family: var(--mono);
+    font-weight: normal;
+}
+
+footer {
+    margin-top: 40px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        animation: none !important;
+        transition: none !important;
+    }
+}
+
+/* spacing fixes */
+.artwork-item img {
+    background: transparent;
+    object-position: center bottom;
+}
+
+.artwork-label::before,
+.project-label::before {
+    flex: none;
+}
+
+/* about photo keeps its natural proportions */
+.self-img {
+    max-width: 360px;
+}
+
+.self-img img {
+    width: 100%;
+    height: auto;
+}
+
+/* project/artwork modals */
+.project-modal-content,
+.artwork-modal-content {
+    overscroll-behavior: contain;
+}
+
+html {
+    scrollbar-gutter: stable;
+}
+
+/* ==========================================================================
+   Typography — a writer's desk: Garamond text, typewriter marginalia
+   ========================================================================== */
+
+:root {
+    --display: "Cormorant Garamond", "Noto Serif SC", "Songti SC", "Noto Serif JP", "Hiragino Mincho ProN", Georgia, serif;
+    --text: "EB Garamond", "Noto Serif SC", "Songti SC", "Noto Serif JP", "Hiragino Mincho ProN", Georgia, serif;
+}
+
+html[lang="ja"] {
+    --display: "Cormorant Garamond", "Noto Serif JP", "Hiragino Mincho ProN", "Noto Serif SC", Georgia, serif;
+    --text: "EB Garamond", "Noto Serif JP", "Hiragino Mincho ProN", "Noto Serif SC", Georgia, serif;
+}
+
+body {
+    font-family: var(--text);
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+}
+
+p, ul, li {
+    font-family: var(--text);
+    line-height: 1.65em;
+}
+
+p {
+    font-size: 1.85em;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: var(--display);
+    font-weight: 500;
+    letter-spacing: -0.01em;
+}
+
+h1 {
+    font-size: 5.6em;
+    line-height: 1;
+    letter-spacing: -0.02em;
+}
+
+/* home: Chinese name in Song, English name in italic */
+nav ul {
+    font-family: var(--display);
+    font-size: 2.1em;
+    font-weight: 600;
+}
+
+footer ul {
+    font-family: var(--display);
+    font-weight: 600;
+}
+
+footer .fine {
+    font-family: var(--mono);
+    font-size: 1.1em;
+    letter-spacing: 0.02em;
+}
+
+/* typewriter marginalia stays Courier */
+.artwork-label,
+.project-label,
+.artwork-modal-caption,
+.contacts li a,
+.language-switcher button,
+.back-button button,
+.self-img p {
+    font-family: var(--mono);
+}
+
+.self-img p {
+    font-style: normal !important;
+    font-size: 1.1rem !important;
+    color: #666;
+}
+
+/* blog */
+ul.posts li a {
+    font-family: var(--display);
+    font-weight: 500;
+    font-size: 1.15em;
+    color: #444;
+}
+
+#post-content {
+    font-family: var(--text);
+}
+
+#post-content h1,
+#post-content h2,
+#post-content h3,
+#post-content h4 {
+    font-family: var(--display);
+    font-weight: 600;
+}
+
+#post-content p,
+#post-content li {
+    font-family: var(--text);
+    font-size: 1.7em;
+    line-height: 1.95em;
+}
+
+#post-content blockquote {
+    margin: 1.6em 0;
+    padding-left: 1.2em;
+    border-left: 2px solid var(--accent);
+    font-style: italic;
+    color: #555;
+}
+
+/* modals */
+.project-modal-title {
+    font-family: var(--display);
+    font-weight: 600;
+}
+
+.project-modal-desc {
+    font-family: var(--text);
+    font-size: 1.7em;
+    line-height: 1.6;
+}
+
+.project-modal-content,
+.artwork-modal-content {
+    box-sizing: border-box;
+    max-height: 90vh;
+}
+
+@media (max-width: 800px) {
+    h1 { font-size: 3.4em; }
+    p { font-size: 1.5em; }
+    nav ul { font-size: 1.8em; }
+    #post-content p, #post-content li { font-size: 1.45em; }
+}
+
+/* links inside prose: legible, underlined in vermilion */
+.about p a,
+.container p a,
+#blog-intro a,
+#post-content a {
+    color: #444;
+    text-decoration: underline;
+    text-decoration-color: var(--accent);
+    text-decoration-thickness: 1px;
+    text-underline-offset: 0.18em;
+}
+
+.about p a:hover,
+.container p a:hover,
+#blog-intro a:hover,
+#post-content a:hover {
+    color: var(--accent);
+}
+
+footer ul {
+    font-size: 2.4em;
+}
+
+footer .fine {
+    font-size: 1.5em;
+    color: #888;
+}
+
+/* ==========================================================================
+   About — compact portrait + short contact list
+   ========================================================================== */
+
+.about-card {
+    display: flex;
+    align-items: flex-end;
+    gap: clamp(24px, 4vw, 56px);
+    margin-top: 56px;
+    padding-top: 28px;
+    border-top: 1px solid #d5d5d5;
+}
+
+.about-card .self-img {
+    flex: none;
+    width: 190px;
+    max-width: none;
+    margin: 0;
+}
+
+.about-card .self-img img {
+    box-shadow: 0 14px 22px -16px rgba(0, 0, 0, 0.45);
+}
+
+.about-card .self-img p {
+    margin: 14px 0 0;
+    font-size: 0.9rem !important;
+    line-height: 1.5;
+}
+
+.about-card .contacts {
+    display: block;
+    flex: 1;
+    max-width: 260px;
+    margin: 0 0 4px;
+    padding: 0;
+    list-style: none;
+    font-size: 1rem;
+    border-top: 1px solid #333;
+}
+
+.about-card .contacts li {
+    display: block;
+    margin: 0;
+    border-bottom: 1px solid #d5d5d5;
+}
+
+.about-card .contacts li a {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 12px 0;
+    border: 0;
+    font-family: var(--mono);
+    font-size: 1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #333;
+    text-decoration: none;
+    transition: padding-left 0.3s ease, color 0.2s;
+}
+
+.about-card .contacts li a::after {
+    content: "\2197";
+    color: var(--accent);
+}
+
+.about-card .contacts li a:hover {
+    padding-left: 8px;
+    color: var(--accent);
+}
+
+@media (max-width: 560px) {
+    .about-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .about-card .contacts {
+        width: 100%;
+        max-width: none;
+    }
+}
+
+/* blog index: title left, date right */
+ul.posts li a .post-title {
+    flex: 1;
+}
+
+ul.posts li a .post-date {
+    font-family: var(--mono);
+    font-size: 0.6em;
+    letter-spacing: 0.08em;
+    color: #888;
+}
+
+/* nav labels never break mid-word (long Japanese labels) */
+nav {
+    flex-wrap: wrap;
+    gap: 10px 32px;
+}
+
+nav ul {
+    flex-wrap: wrap;
+}
+
+nav ul li {
+    white-space: nowrap;
+}
+
+html[lang="ja"] nav ul {
+    font-size: 1.8em;
+}
+
+html[lang="ja"] nav > ul:first-child li {
+    margin-right: 28px;
+}
+
+.language-switcher {
+    margin-left: auto;
+}
+
+/* ==========================================================================
+   Home — editorial composition
+   ========================================================================== */
+
+body.home {
+    width: 86%;
+    max-width: 1320px;
+}
+
+.stage {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto minmax(0, 1.45fr);
+    column-gap: clamp(20px, 3.2vw, 52px);
+    padding-top: clamp(28px, 7vh, 84px);
+    align-items: stretch;
+}
+
+.intro {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+}
+
+.intro::before {
+    content: "";
+    display: block;
+    width: 48px;
+    height: 4px;
+    margin-top: 6px;
+    background: var(--accent);
+}
+
+.name {
+    margin: auto 0 -0.06em;
+    font-family: var(--display);
+    font-weight: 400;
+    font-size: clamp(4.4rem, 8.4vw, 9.6rem);
+    line-height: 0.86;
+    letter-spacing: -0.025em;
+    color: #111;
+}
+
+.name span {
+    display: block;
+    animation: rise 1.1s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+}
+
+.name span:nth-child(2) {
+    padding-left: 0.9em;
+    animation-delay: 0.15s;
+}
+
+@keyframes rise {
+    from { opacity: 0; transform: translateY(18px); }
+    to   { opacity: 1; transform: none; }
+}
+
+.name-zh {
+    writing-mode: vertical-rl;
+    align-self: start;
+    padding-top: 6px;
+    font-family: var(--display);
+    font-weight: 600;
+    font-size: clamp(1.7rem, 2.6vw, 2.5rem);
+    letter-spacing: 0.5em;
+    line-height: 1;
+    color: #111;
+}
+
+.plate {
+    margin: 0;
+    min-width: 0;
+}
+
+.plate img {
+    display: block;
+    width: 100%;
+    height: auto;
+    max-height: 72vh;
+    object-fit: contain;
+    object-position: left top;
+    animation: develop 1.4s ease-out both;
+}
+
+@keyframes develop {
+    from { opacity: 0; filter: grayscale(1) blur(6px); }
+    to   { opacity: 1; filter: none; }
+}
+
+.plate figcaption {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 18px;
+    padding-top: 10px;
+    border-top: 1px solid #333;
+    font-family: var(--mono);
+    font-size: 1rem;
+    letter-spacing: 0.08em;
+    color: var(--accent);
+}
+
+.plate figcaption span:last-child {
+    font-family: var(--display);
+    font-style: italic;
+    font-size: 1.7rem;
+    letter-spacing: 0;
+    color: #222;
+}
+
+@media (max-width: 860px) {
+    body.home {
+        width: 90%;
+    }
+    .stage {
+        grid-template-columns: minmax(0, 1fr);
+        row-gap: 28px;
+    }
+    .name {
+        margin-top: 36px;
+        font-size: clamp(4.2rem, 22vw, 7rem);
+    }
+    .name-zh {
+        writing-mode: horizontal-tb;
+        letter-spacing: 0.4em;
+    }
+}

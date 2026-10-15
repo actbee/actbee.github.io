@@ -1,18 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23d93a1c'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+SC:wght@400;600&display=swap">
+  <script src="/js/analytics.js" defer></script>
+  <title>Blog · Xuedan Zou</title>
   <link rel="stylesheet" type="text/css" href="/css/main.css">
   <script src="https://cdn.jsdelivr.net/npm/showdown/dist/showdown.min.js"></script> <!-- Showdown library -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-180549038-1"></script>
   <script src="/js/include.js" defer></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag() { dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'UA-180549038-1');
-  </script>
 </head>
 
 <body>
@@ -25,20 +24,16 @@
 
 <div id="blog-intro">
   <p id="blog-intro-en" data-lang="en">
-    I am always trying to do some outputs based on my thoughts. You could check
-    <a href="https://actbee.substack.com">My Substack</a> for the latest articles.
+    I am always trying to turn my thoughts into writing. For the latest articles, visit
+    <a href="https://actbee.substack.com">my Substack</a>.
   </p>
 
   <p id="blog-intro-zh" data-lang="zh" hidden>
-    他一直在尝试把自己的想法整理成文字输出。您可以在
-    <a href="https://actbee.substack.com">My Substack</a>
-    查看最新文章。
+    他一直在尝试把自己的想法整理成文字。您可以在 <a href="https://actbee.substack.com">Substack</a> 查看最新文章。
   </p>
 
   <p id="blog-intro-ja" data-lang="ja" hidden>
-    自分の考えを言語化して発信するようにしています。最新の記事は
-    <a href="https://actbee.substack.com">My Substack</a>
-    でご覧いただけます。
+    自分の考えを言語化して発信するようにしています。最新の記事は <a href="https://actbee.substack.com">Substack</a> でご覧いただけます。
   </p>
 </div>
 <ul class="posts" id="posts-list">
@@ -62,12 +57,22 @@
         return;
       }
 
-      const markdownFiles = await response.json();
+      const markdownFiles = (await response.json()).sort().reverse();
       for (const file of markdownFiles) {
         const listItem = document.createElement('li');
         const link = document.createElement('a');
         link.href = `?post=${file}`;
-        link.textContent = file.replace(/-/g, ' ');
+        const m = file.match(/^(\d{4})-(\d{2})-(\d{2})-(.*)$/);
+        const title = document.createElement('span');
+        title.className = 'post-title';
+        title.textContent = (m ? m[4] : file).replace(/-/g, ' ').trim();
+        link.appendChild(title);
+        if (m) {
+          const date = document.createElement('span');
+          date.className = 'post-date';
+          date.textContent = `${m[1]}.${m[2]}.${m[3]}`;
+          link.appendChild(date);
+        }
         link.addEventListener('click', (event) => {
           event.preventDefault(); // Prevent default navigation
           loadPostContent(file); // Load the post content

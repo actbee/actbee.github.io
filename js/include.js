@@ -51,6 +51,14 @@ function applyLanguage(lang) {
     });
 }
 
+function markCurrentPage() {
+    const here = location.pathname.replace(/\/index\.html$/, "/");
+    document.querySelectorAll("nav a[href]").forEach((a) => {
+        const target = new URL(a.getAttribute("href"), location.origin).pathname.replace(/\/index\.html$/, "/");
+        if (target === here) a.setAttribute("aria-current", "page");
+    });
+}
+
 function switchLanguage(lang) {
     applyLanguage(lang);
 }
@@ -67,6 +75,7 @@ async function includeHTML() {
 
 document.addEventListener("DOMContentLoaded", async () => {
     await includeHTML(); // nav is injected here
+    markCurrentPage();
     const saved = localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
     applyLanguage(saved);
 });

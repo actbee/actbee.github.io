@@ -1,70 +1,71 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<script src="/js/include.js" defer></script>
+	<script src="/js/analytics.js" defer></script>
 	<meta charset="UTF-8">
-	<div data-include="/layouts/head.html"></div>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='12' fill='%23d93a1c'/%3E%3C/svg%3E">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+SC:wght@400;600&display=swap">
+	<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Z7ZYRKp_O9DFEvt_2YkxdESPbs1vqhD5eorXyE1cMjc"></script>
+	<title>Xuedan Zou</title>
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
 </head>
 
-<body>
+<body class="home">
 <div data-include="/layouts/nav.html"></div>
 <div class="container">
-
-	<p><br><br></p>
-
-	<div class="blurb">
-		<div align="center">
-			<h1>邹 雪丹</h1>
-			<h1>Xuedan ZOU</h1>
-			<br><br>
-			<script type="text/javascript">
-				var pic = [
-					"https://github.com/actbee/actbee.github.io/blob/master/images/2.1.jpg?raw=true",
-					"https://github.com/actbee/actbee.github.io/blob/master/images/2.2.jpg?raw=true",
-					"https://github.com/actbee/actbee.github.io/blob/master/images/2.3.jpg?raw=true",
-					"https://github.com/actbee/actbee.github.io/blob/master/images/2.4.jpg?raw=true",
-					"https://github.com/actbee/actbee.github.io/blob/master/images/cover.png?raw=true",
-					"https://xuedananimation.wordpress.com/wp-content/uploads/2022/08/e2122345-2450-4d4b-a4c1-d02eff856359.png",
-					"https://xuedananimation.wordpress.com/wp-content/uploads/2022/08/1411661913933_.pic_.jpg"
-				];
-
-				var mes = [
-					"東京 Tokyo",
-					"史　History",
-					"商 Business",
-					"権 Power",
-					"美 Beautiful",
-					"感 Feel"
-				];
-
-				// Select the container where the image and text will be inserted
-				var container = document.querySelector('.blurb div[align="center"]');
-
-				// Generate random indices
-				var randomBgIndex = Math.floor(Math.random() * pic.length);
-
-				// Create the image element
-				var img = document.createElement('img');
-				img.src = pic[randomBgIndex];
-				img.width = 700;
-
-				// Append the image to the container
-				container.appendChild(img);
-
-				// Generate another random index for the message
-				randomBgIndex = Math.floor(Math.random() * mes.length);
-
-				// Create the paragraph element
-				var paragraph = document.createElement('p');
-				paragraph.textContent = mes[randomBgIndex];
-
-				// Append the paragraph to the container
-				container.appendChild(paragraph);
-			</script>
+	<section class="stage">
+		<div class="intro">
+			<h1 class="name"><span>Xuedan</span><span>Zou</span></h1>
 		</div>
-	</div>
-	<p><br><br></p>
+
+		<div class="name-zh" lang="zh-Hans" aria-label="邹雪丹">邹雪丹</div>
+
+		<figure class="plate" id="plate"></figure>
+	</section>
 </div>
+<script>
+	(function () {
+		var pic = [
+			"/images/2.1.jpg",
+			"/images/2.2.jpg",
+			"/images/2.3.jpg",
+			"/images/2.4.jpg",
+			"/images/cover.png",
+			"https://xuedananimation.wordpress.com/wp-content/uploads/2022/08/e2122345-2450-4d4b-a4c1-d02eff856359.png",
+			"https://xuedananimation.wordpress.com/wp-content/uploads/2022/08/1411661913933_.pic_.jpg"
+		];
+		var mes = [
+			"東京 Tokyo",
+			"史 History",
+			"商 Business",
+			"権 Power",
+			"美 Beautiful",
+			"感 Feel"
+		];
+
+		var i = Math.floor(Math.random() * pic.length);
+		var m = mes[Math.floor(Math.random() * mes.length)];
+		var fig = document.getElementById('plate');
+
+		var img = document.createElement('img');
+		img.src = pic[i];
+		img.alt = m;
+		fig.appendChild(img);
+
+		var cap = document.createElement('figcaption');
+		var no = document.createElement('span');
+		no.textContent = 'No. ' + String(i + 1).padStart(2, '0');
+		var word = document.createElement('span');
+		word.textContent = m;
+		cap.appendChild(no);
+		cap.appendChild(word);
+		fig.appendChild(cap);
+	})();
+</script>
 <div style="width: 100px; height: 100px; overflow: hidden; display: inline-block;">
 	<script type="text/javascript" id="clustrmaps" src="//clustrmaps.com/map_v2.js?d=Z7ZYRKp_O9DFEvt_2YkxdESPbs1vqhD5eorXyE1cMjc&cl=ffffff&w=a"></script>
 </div>
