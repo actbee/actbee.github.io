@@ -521,7 +521,7 @@ footer .fine {
 }
 
 body {
-    animation: settle 0.8s ease-out both;
+    animation: settle 0.3s ease-out both;
 }
 
 @keyframes settle {
