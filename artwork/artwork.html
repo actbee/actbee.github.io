@@ -9,7 +9,6 @@
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Serif+JP:wght@400;600&family=Noto+Serif+SC:wght@400;600&display=swap">
 	<script src="/js/analytics.js" defer></script>
-	<script type="text/javascript" id="clstr_globe" src="//clustrmaps.com/globe.js?d=Z7ZYRKp_O9DFEvt_2YkxdESPbs1vqhD5eorXyE1cMjc"></script>
 
 	<title>Artwork · Xuedan Zou</title>
 	<link rel="stylesheet" type="text/css" href="/css/main.css">
@@ -27,19 +26,19 @@
 
 	<div class="artwork-gallery">
 		<div class="artwork-item" onclick="openSeries('2026_Sep')">
-			<img src="/images/artworks/2026_Sep_a.jpg" alt="2026 Sep" />
+			<img src="/images/artworks/2026_Sep_a.jpg" alt="2026 Sep" loading="lazy" decoding="async" />
 			<p class="artwork-label">2026 Sep</p>
 		</div>
 		<div class="artwork-item" onclick="openSeries('2026_Aug')">
-			<img src="/images/artworks/2026_Aug_a.jpg" alt="2026 Aug" />
+			<img src="/images/artworks/2026_Aug_a.jpg" alt="2026 Aug" loading="lazy" decoding="async" />
 			<p class="artwork-label">2026 Aug</p>
 		</div>
 		<div class="artwork-item" onclick="openSeries('2026_June')">
-			<img src="/images/artworks/2026_June_a.jpg" alt="2026 Jun" />
+			<img src="/images/artworks/2026_June_a.jpg" alt="2026 Jun" loading="lazy" decoding="async" />
 			<p class="artwork-label">2026 Jun</p>
 		</div>
 		<div class="artwork-item" onclick="openSeries('2026_April')">
-			<img src="/images/artworks/2026_April_a.jpg" alt="2026 Apr" />
+			<img src="/images/artworks/2026_April_a.jpg" alt="2026 Apr" loading="lazy" decoding="async" />
 			<p class="artwork-label">2026 Apr</p>
 		</div>
 	</div>
@@ -105,7 +104,7 @@
 		if (!series) return;
 
 		document.getElementById('artwork-modal-images').innerHTML = series.images.map(src =>
-			`<img src="${src}" alt="${name}" style="cursor:zoom-in" onclick="openZoom(event, this.src)" />`
+			`<img src="${src}" alt="${name}" loading="lazy" decoding="async" style="cursor:zoom-in" onclick="openZoom(event, this.src)" />`
 		).join('');
 
 		document.getElementById('artwork-modal-info').innerHTML = series.info

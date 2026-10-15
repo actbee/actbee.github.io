@@ -73,9 +73,17 @@ async function includeHTML() {
     }));
 }
 
-document.addEventListener("DOMContentLoaded", async () => {
-    await includeHTML(); // nav is injected here
+async function initPage() {
+    // apply language to page content right away; nav is translated again after injection
+    applyLanguage(localStorage.getItem(LANG_KEY) || DEFAULT_LANG);
+    await includeHTML();
     markCurrentPage();
-    const saved = localStorage.getItem(LANG_KEY) || DEFAULT_LANG;
-    applyLanguage(saved);
-});
+    applyLanguage(localStorage.getItem(LANG_KEY) || DEFAULT_LANG);
+}
+
+// scripts are deferred, so the DOM is already parsed when this runs
+if (document.readyState === "loading") {
+    document.addEventListener("DOMContentLoaded", initPage);
+} else {
+    initPage();
+}
