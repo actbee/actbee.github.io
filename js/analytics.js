@@ -2,7 +2,7 @@
 (function () {
     var CONFIG = {
         GA4_ID: "",        // Google Analytics 4, e.g. "G-XXXXXXXXXX"
-        GOATCOUNTER: ""    // GoatCounter site code, e.g. "actbee" -> actbee.goatcounter.com
+        GOATCOUNTER: "actbee"    // GoatCounter site code -> actbee.goatcounter.com
     };
 
     var host = location.hostname;
