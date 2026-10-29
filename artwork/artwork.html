@@ -26,6 +26,10 @@
 	<p data-lang="ja" hidden>私の絵画とドローイングのコレクション。シリーズをクリックすると、全作品をご覧いただけます。</p>
 
 	<div class="artwork-gallery">
+		<div class="artwork-item" onclick="openSeries('2026_Oct')">
+			<img src="/images/artworks/2026_Oct_a.jpg" alt="2026 Oct" loading="lazy" decoding="async" />
+			<p class="artwork-label">2026 Oct</p>
+		</div>
 		<div class="artwork-item" onclick="openSeries('2026_Sep')">
 			<img src="/images/artworks/2026_Sep_a.jpg" alt="2026 Sep" loading="lazy" decoding="async" />
 			<p class="artwork-label">2026 Sep</p>
@@ -64,6 +68,15 @@
 
 <script>
 	const SERIES = {
+		'2026_Oct': {
+			images: [
+				'/images/artworks/2026_Oct_a.jpg',
+				'/images/artworks/2026_Oct_b.jpg',
+				'/images/artworks/2026_Oct_c.jpg',
+				'/images/artworks/2026_Oct_d.jpg'
+			],
+			info: '都市生成-SEOUL · October 2026 · Acrylic painting · 455 × 380 mm'
+		},
 		'2026_Sep': {
 			images: [
 				'/images/artworks/2026_Sep_a.jpg',
